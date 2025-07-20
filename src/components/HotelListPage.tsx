@@ -10,7 +10,7 @@ export default function HotelListPage() {
   useEffect(() => {
     const fetchHotels = async () => {
       const query = locationFilter ? `?location=${locationFilter}` : '';
-      const res = await fetch(`http://localhost:4000/hotel${query}`);
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/hotel${query}`);
       const data = await res.json();
       setHotels(data);
     };
