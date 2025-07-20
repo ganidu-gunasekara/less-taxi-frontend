@@ -44,6 +44,7 @@ export default function HotelListPage() {
       {hotels.length === 0 ? (
         <p className="text-center text-gray-500">No deals available.</p>
       ) : (
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         hotels.map((hotel: any, i: number) => (
           <HotelCard key={i} {...hotel} />
         ))
